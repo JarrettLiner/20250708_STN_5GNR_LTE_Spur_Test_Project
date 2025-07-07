@@ -1,0 +1,214 @@
+2025-05-29 11:36:07,666 - INFO - Starting RF measurement script
+2025-05-29 11:36:07,666 - INFO - Loaded test inputs from C:\Users\LINER\Documents\PycharmProjects\STN_5G_LTE_Spur_tests\src\test_inputs.json
+2025-05-29 11:36:07,667 - DEBUG - Test inputs: {
+  "lte": [
+    {
+      "run": false,
+      "center_frequency_ghz": [
+        6.201,
+        6.301,
+        6.401,
+        6.501
+      ],
+      "power_dbm": [
+        -10.0,
+        -9.0,
+        -8.0,
+        -7.0,
+        -6.0,
+        -5.0,
+        -4.0,
+        -3.0,
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "resource_block_offset": 0,
+      "channel_bandwidth_mhz": 5,
+      "modulation_type": "QPSK",
+      "duplexing": "TDD",
+      "link_direction": "UL",
+      "measure_ch_pwr": true,
+      "measure_aclr": true
+    },
+    {
+      "run": false,
+      "center_frequency_ghz": [
+        6.123,
+        6.223,
+        6.323,
+        6.423
+      ],
+      "power_dbm": [
+        -12.0,
+        -11.0,
+        -10.0,
+        -9.0,
+        -8.0,
+        -7.0,
+        -6.0,
+        -5.0,
+        -4.0,
+        -3.0,
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "resource_block_offset": 0,
+      "channel_bandwidth_mhz": 10,
+      "modulation_type": "QAM16",
+      "duplexing": "FDD",
+      "link_direction": "UL",
+      "measure_ch_pwr": true,
+      "measure_aclr": true
+    }
+  ],
+  "nr5g": [
+    {
+      "run": false,
+      "center_frequency_ghz": [
+        6.123,
+        6.223
+      ],
+      "power_dbm": [
+        -5.0,
+        -1.0
+      ],
+      "resource_blocks": 51,
+      "resource_block_offset": 0,
+      "channel_bandwidth_mhz": 20,
+      "modulation_type": "QAM256",
+      "duplexing": "FDD",
+      "link_direction": "UL",
+      "subcarrier_spacing_khz": 30,
+      "measure_ch_pwr": true,
+      "measure_aclr": true
+    },
+    {
+      "run": false,
+      "center_frequency_ghz": [
+        6.323,
+        6.423
+      ],
+      "power_dbm": [
+        -7.0,
+        -3.0
+      ],
+      "resource_blocks": 25,
+      "resource_block_offset": 5,
+      "channel_bandwidth_mhz": 10,
+      "modulation_type": "QPSK",
+      "subcarrier_spacing_khz": 15,
+      "measure_ch_pwr": true,
+      "measure_aclr": true
+    }
+  ],
+  "STN": [
+    {
+      "run": false,
+      "center_frequency_ghz": {
+        "range": {
+          "start_ghz": 0.617,
+          "stop_ghz": 0.961,
+          "step_mhz": 10
+        }
+      },
+      "iterations": 1
+    },
+    {
+      "run": false,
+      "center_frequency_ghz": {
+        "range": {
+          "start_ghz": 2.4,
+          "stop_ghz": 2.481,
+          "step_mhz": 20
+        }
+      },
+      "iterations": 1
+    },
+    {
+      "run": false,
+      "center_frequency_ghz": [
+        2.483,
+        3.3,
+        3.5,
+        3.7,
+        4.1,
+        4.3,
+        4.5,
+        4.7,
+        4.9,
+        5.0,
+        5.15,
+        5.35,
+        5.55,
+        5.75
+      ],
+      "iterations": 1
+    }
+  ],
+  "spur_search": [
+    {
+      "run": true,
+      "fundamental_frequency_ghz": 6.0,
+      "rbw_mhz": 0.01,
+      "spur_limit_dbm": -95
+    }
+  ]
+}
+2025-05-29 11:36:07,667 - DEBUG - Processing SpurSearch test: {'run': True, 'fundamental_frequency_ghz': 6.0, 'rbw_mhz': 0.01, 'spur_limit_dbm': -95}
+2025-05-29 11:36:07,671 - INFO - Connected to 192.168.200.20:5025
+2025-05-29 11:36:07,671 - INFO - Query: *IDN?
+2025-05-29 11:36:07,676 - INFO - Response: Rohde&Schwarz,FSW-50,1331.5003K50/101878,6.20
+2025-05-29 11:36:07,678 - INFO - Connected to 192.168.200.10:5025
+2025-05-29 11:36:07,679 - INFO - Query: *IDN?
+2025-05-29 11:36:07,679 - INFO - Response: Rohde&Schwarz,SMW200A,1412.0000K02/111891,5.30.305.48
+2025-05-29 11:36:07,680 - INFO - SpurSearch initialized: fundamental=6.0 GHz, RBW=0.01 MHz, spur_limit=-95 dBm, VSG_power=0 dBm
+2025-05-29 11:36:07,680 - INFO - Starting SpurSearch test set 1: fundamental=6.000 GHz, RBW=0.010 MHz, limit=-95.00 dBm, power=0.00 dBm
+2025-05-29 11:36:07,680 - INFO - Write: *RST
+2025-05-29 11:36:07,680 - INFO - FSW reset for spur search
+2025-05-29 11:36:07,680 - INFO - Write: INST:SEL 'SPUR'
+2025-05-29 11:36:07,680 - INFO - Selected FSW-K50 Spurious application
+2025-05-29 11:36:07,680 - INFO - Write: SENS:SSE:STYP WIDE
+2025-05-29 11:36:07,680 - INFO - Write: SENS:LIST:CLE
+2025-05-29 11:36:07,680 - INFO - Write: SENS:LIST:RANG1:FREQ:STAR 3000000000
+2025-05-29 11:36:07,680 - INFO - Write: SENS:LIST:RANG1:FREQ:STOP 5999000000
+2025-05-29 11:36:07,680 - INFO - Write: SENS:LIST:RANG1:BAND:RES 10000
+2025-05-29 11:36:07,681 - INFO - Write: SENS:LIST:RANG1:THR:STAR -95.00
+2025-05-29 11:36:07,681 - INFO - Write: SENS:LIST:RANG1:THR:STOP -95.00
+2025-05-29 11:36:07,681 - INFO - Write: SENS:LIST:RANG1:BAND:AUTO OFF
+2025-05-29 11:36:07,681 - INFO - Range 1: 3.000 5.999 GHz
+2025-05-29 11:36:07,681 - INFO - Write: SENS:LIST:RANG2:FREQ:STAR 6001000000
+2025-05-29 11:36:07,681 - INFO - Write: SENS:LIST:RANG2:FREQ:STOP 12000000000
+2025-05-29 11:36:07,681 - INFO - Write: SENS:LIST:RANG2:BAND:RES 10000
+2025-05-29 11:36:07,681 - INFO - Write: SENS:LIST:RANG2:THR:STAR -95.00
+2025-05-29 11:36:07,682 - INFO - Write: SENS:LIST:RANG2:THR:STOP -95.00
+2025-05-29 11:36:07,682 - INFO - Write: SENS:LIST:RANG2:BAND:AUTO OFF
+2025-05-29 11:36:07,682 - INFO - Range 2: 6.001 12.000 GHz
+2025-05-29 11:36:07,682 - INFO - Query: :SENS:ADJ:LEV;*OPC?
+2025-05-29 11:36:10,950 - INFO - Response: 1
+2025-05-29 11:36:10,950 - INFO - Spur detection table configured
+2025-05-29 11:36:10,950 - INFO - Write: *RST
+2025-05-29 11:36:10,950 - INFO - Write: SOUR:FREQ:CW 6000000000
+2025-05-29 11:36:10,951 - INFO - Write: SOUR:POW:LEV:IMM:AMPL 0.00
+2025-05-29 11:36:10,951 - INFO - Write: OUTP:STAT ON
+2025-05-29 11:36:10,951 - INFO - VSG set: frequency=6.000 GHz, power=0.00 dBm
+2025-05-29 11:36:10,951 - INFO - Write: :INIT:CONT OFF
+2025-05-29 11:36:10,951 - INFO - Query: INIT:IMM;*OPC?
+2025-05-29 11:36:24,819 - INFO - Response: 1
+2025-05-29 11:36:24,819 - INFO - Spur search measurement completed
+2025-05-29 11:36:24,819 - INFO - Query: TRAC3:DATA? LIST
+2025-05-29 11:36:24,820 - INFO - Response: 5995018109.2,-94.86,0.14,9996.1,3000000000.0,5999000000.0,1,0,---,0,5995223479.0,-91.36,3.64,9996.1,3000000000.0,5999000000.0,2,0,---,0,12000000000.0,-30.27,64.73,9997.8,6001000000.0,12000000000.0,3,0,---,0
+2025-05-29 11:36:24,820 - INFO - Spur: 5.995018 GHz, -94.86 dBm
+2025-05-29 11:36:24,820 - INFO - Spur: 0.000000 GHz, 0.00 dBm
+2025-05-29 11:36:24,820 - INFO - Spur: 0.000000 GHz, 9996.10 dBm
+2025-05-29 11:36:24,820 - WARNING - Error parsing spur data at index 18: could not convert string to float: '---'
+2025-05-29 11:36:24,820 - INFO - Socket closed
+2025-05-29 11:36:24,820 - INFO - FSW connection closed
+2025-05-29 11:36:24,820 - INFO - Write: OUTP:STAT OFF
+2025-05-29 11:36:24,820 - INFO - Socket closed
+2025-05-29 11:36:24,820 - INFO - VSG connection closed
+2025-05-29 11:36:24,822 - INFO - Saved results to: C:\Users\LINER\Documents\PycharmProjects\STN_5G_LTE_Spur_tests\src\results_output.json
+2025-05-29 11:36:25,030 - INFO - Successfully saved to: C:\Users\LINER\Documents\PycharmProjects\STN_5G_LTE_Spur_tests\src\results_output.xlsx
+2025-05-29 11:36:25,105 - INFO - Socket closed
+2025-05-29 11:36:25,106 - INFO - Socket closed
